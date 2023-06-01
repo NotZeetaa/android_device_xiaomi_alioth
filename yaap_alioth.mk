@@ -9,8 +9,8 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common PixelOs stuff.
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+# Inherit some common Yaap stuff.
+$(call inherit-product, vendor/yaap/config/common_full_phone.mk)
 
 # Inherit Google Pixel Updatable APEX
 TARGET_SHIP_PREBUILT_APEX := true
@@ -28,7 +28,7 @@ TARGET_SUPPORTS_NEXT_GEN_ASSISTANT := true
 # Inherit from alioth device
 $(call inherit-product, device/xiaomi/alioth/device.mk)
 
-PRODUCT_NAME := aosp_alioth
+PRODUCT_NAME := yaap_alioth
 PRODUCT_DEVICE := alioth
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := POCO
