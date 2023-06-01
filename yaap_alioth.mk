@@ -9,8 +9,8 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common Rising stuff.
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+# Inherit some common Yaap stuff.
+$(call inherit-product, vendor/yaap/config/common_full_phone.mk)
 
 # Inherit Google Pixel Updatable APEX
 TARGET_SHIP_PREBUILT_APEX := true
@@ -30,23 +30,11 @@ TARGET_USES_MINI_GAPPS := false
 # Inherit from alioth device
 $(call inherit-product, device/xiaomi/alioth/device.mk)
 
-PRODUCT_NAME := lineage_alioth
+PRODUCT_NAME := yaap_alioth
 PRODUCT_DEVICE := alioth
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := POCO
 PRODUCT_MODEL := POCO F3
-
-# RisingOS stuff
-RISING_CHIPSET := "Snapdragon 870 5G"
-RISING_MAINTAINER := "NotZeetaa"
-TARGET_BUILD_APERTURE_CAMERA := true
-TARGET_ENABLE_BLUR := true
-TARGET_HAS_UDFPS := false
-TARGET_USE_PIXEL_FINGERPRINT := true
-WITH_GMS := true
-TARGET_USE_GOOGLE_TELEPHONY := true
-TARGET_CORE_GMS := false
-TARGET_CORE_GMS_EXTRAS := true
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
